@@ -20,6 +20,7 @@
     // initialize instance variables
     initialized = FALSE;
     serverURL = url;
+    scheme = @"ios-gaeChannel://";
     [self setDelegate:nil];
 
     // initialize hidden webview object
@@ -76,8 +77,8 @@
 #pragma mark UIWebViewDelegate method
 
 - (void)webViewDidFinishLoad:(UIWebView *)ignored {
-  NSString *function = [NSString stringWithFormat:@"loadJSAPI('%@');", serverURL];
-  [webView stringByEvaluatingJavaScriptFromString:function];
+  NSString *cmds = [NSString stringWithFormat:@"loadJSAPI('%@');setScheme('%@');", serverURL, scheme];
+  [webView stringByEvaluatingJavaScriptFromString:cmds];
   initialized = TRUE;
 }
 

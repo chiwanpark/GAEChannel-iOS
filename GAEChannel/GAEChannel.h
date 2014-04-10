@@ -11,6 +11,7 @@
 #import "GAEChannelDelegate.h"
 
 @interface GAEChannel : NSObject <UIWebViewDelegate> {
+  NSString *scheme;
   NSString *serverURL;
   UIWebView *webView;
   BOOL initialized;

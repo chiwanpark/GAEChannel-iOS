@@ -4,6 +4,8 @@
   <meta charset="utf-8"/>
   <title>GAEChannel View</title>
   <script type="text/javascript">
+    var scheme = '';
+
     function init(serverURL) {
       var xhrObj = new XMLHttpRequest();
 
@@ -20,6 +22,10 @@
       script.src = serverURL + '/_ah/channel/jsapi';
 
       head.appendChild(script);
+    }
+
+    function setScheme(newScheme) {
+      scheme = newScheme;
     }
   </script>
 </head>
