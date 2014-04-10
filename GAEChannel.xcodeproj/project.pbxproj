@@ -1,0 +1,538 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		409CC64F18F706F100781B75 /* Framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 409CC65018F706F100781B75 /* Build configuration list for PBXAggregateTarget "Framework" */;
+			buildPhases = (
+				409CC65518F7071400781B75 /* ShellScript */,
+			);
+			dependencies = (
+				409CC65418F7070600781B75 /* PBXTargetDependency */,
+			);
+			name = Framework;
+			productName = Framework;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		409CC64C18F7041900781B75 /* GAEChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 925D53DFB8D6D648CEBEF75B /* GAEChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		409CC64E18F7063E00781B75 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925D50E589E8B61CFDBDDD74 /* UIKit.framework */; };
+		925D51AC7BE3BE035CAAFF0D /* GAEChannelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D595EBDFF2F84D2BA16AB /* GAEChannelTests.m */; };
+		925D51EF595ACDA5E45BBB85 /* GAEChannel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 925D53DFB8D6D648CEBEF75B /* GAEChannel.h */; };
+		925D534E31D8E5EBEAC1A8CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925D50E589E8B61CFDBDDD74 /* UIKit.framework */; };
+		925D56111097DF7C52EBFFD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925D57F6C7ABBC15D5E14C54 /* Foundation.framework */; };
+		925D5B18C026FDE302B5F2EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 925D5AFE7DC3ADA06D630422 /* InfoPlist.strings */; };
+		925D5B361CC6FFCF41901812 /* GAEChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D544846BCB077FD79ECAE /* GAEChannel.m */; };
+		925D5CCDF7B4ECBBA2D68C97 /* libGAEChannel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 925D5AA20B9A51A0C22F93D9 /* libGAEChannel.a */; };
+		925D5DD28F3BCCDDD61AE7F0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925D5E31348BE231E1FC1899 /* XCTest.framework */; };
+		925D5E7F2671521BD6077162 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925D57F6C7ABBC15D5E14C54 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		409CC65318F7070600781B75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 925D56CA00A4A36F340D3995 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 925D5721DB3EF02D70A6DF85;
+			remoteInfo = GAEChannel;
+		};
+		925D5826B8D264FF4A7D0ACE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 925D56CA00A4A36F340D3995 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 925D5721DB3EF02D70A6DF85;
+			remoteInfo = GAEChannel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		925D5ED3658F796C5EBBCA75 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				925D51EF595ACDA5E45BBB85 /* GAEChannel.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		925D50E589E8B61CFDBDDD74 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		925D5193AF76D7BE6A9D67CB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		925D5326E64B594ED2110829 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
+		925D53DFB8D6D648CEBEF75B /* GAEChannel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAEChannel.h; sourceTree = "<group>"; };
+		925D544846BCB077FD79ECAE /* GAEChannel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GAEChannel.m; sourceTree = "<group>"; };
+		925D569A4B8FBB811F2F2DE0 /* GAEChannel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GAEChannel-Prefix.pch"; sourceTree = "<group>"; };
+		925D57EF13C1869FA10075FB /* GAEChannelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GAEChannelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		925D57F6C7ABBC15D5E14C54 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		925D595EBDFF2F84D2BA16AB /* GAEChannelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GAEChannelTests.m; sourceTree = "<group>"; };
+		925D5A12E116236E5FB9924D /* GAEChannelTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "GAEChannelTests-Info.plist"; sourceTree = "<group>"; };
+		925D5AA20B9A51A0C22F93D9 /* libGAEChannel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGAEChannel.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		925D5E31348BE231E1FC1899 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		925D5AD17F033759F9D4D9AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				925D5DD28F3BCCDDD61AE7F0 /* XCTest.framework in Frameworks */,
+				925D56111097DF7C52EBFFD8 /* Foundation.framework in Frameworks */,
+				925D534E31D8E5EBEAC1A8CD /* UIKit.framework in Frameworks */,
+				925D5CCDF7B4ECBBA2D68C97 /* libGAEChannel.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		925D5C9B5E8C59EC22D9E65F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				409CC64E18F7063E00781B75 /* UIKit.framework in Frameworks */,
+				925D5E7F2671521BD6077162 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		925D50C9D07726DFAEA57FD3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				925D569A4B8FBB811F2F2DE0 /* GAEChannel-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		925D50DCBEF8F55A22A94C41 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				925D5A12E116236E5FB9924D /* GAEChannelTests-Info.plist */,
+				925D5AFE7DC3ADA06D630422 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		925D54B709D1FC80337B228C /* assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		925D55388E9C0530EF0C2A51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				925D5AA20B9A51A0C22F93D9 /* libGAEChannel.a */,
+				925D57EF13C1869FA10075FB /* GAEChannelTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		925D5B0817105FACDF879F1A /* GAEChannel */ = {
+			isa = PBXGroup;
+			children = (
+				925D50C9D07726DFAEA57FD3 /* Supporting Files */,
+				925D53DFB8D6D648CEBEF75B /* GAEChannel.h */,
+				925D544846BCB077FD79ECAE /* GAEChannel.m */,
+				925D54B709D1FC80337B228C /* assets */,
+			);
+			path = GAEChannel;
+			sourceTree = "<group>";
+		};
+		925D5C2BAA8282D2D20F13E7 /* GAEChannelTests */ = {
+			isa = PBXGroup;
+			children = (
+				925D50DCBEF8F55A22A94C41 /* Supporting Files */,
+				925D595EBDFF2F84D2BA16AB /* GAEChannelTests.m */,
+			);
+			path = GAEChannelTests;
+			sourceTree = "<group>";
+		};
+		925D5DADDB123E320368300E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				925D57F6C7ABBC15D5E14C54 /* Foundation.framework */,
+				925D5E31348BE231E1FC1899 /* XCTest.framework */,
+				925D50E589E8B61CFDBDDD74 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		925D5FD4BAEC2B3201FED637 = {
+			isa = PBXGroup;
+			children = (
+				925D55388E9C0530EF0C2A51 /* Products */,
+				925D5DADDB123E320368300E /* Frameworks */,
+				925D5B0817105FACDF879F1A /* GAEChannel */,
+				925D5C2BAA8282D2D20F13E7 /* GAEChannelTests */,
+				925D5326E64B594ED2110829 /* .gitignore */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		409CC64A18F7037A00781B75 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				409CC64C18F7041900781B75 /* GAEChannel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		925D5721DB3EF02D70A6DF85 /* GAEChannel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 925D5407EAC88D5F7A41F37A /* Build configuration list for PBXNativeTarget "GAEChannel" */;
+			buildPhases = (
+				925D5AEC78C4A375C9311937 /* Sources */,
+				925D5C9B5E8C59EC22D9E65F /* Frameworks */,
+				925D5ED3658F796C5EBBCA75 /* CopyFiles */,
+				409CC64A18F7037A00781B75 /* Headers */,
+				409CC64D18F7051D00781B75 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GAEChannel;
+			productName = GAEChannel;
+			productReference = 925D5AA20B9A51A0C22F93D9 /* libGAEChannel.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		925D5FF13A10BAC4B70C0249 /* GAEChannelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 925D5313C267264EB03F2256 /* Build configuration list for PBXNativeTarget "GAEChannelTests" */;
+			buildPhases = (
+				925D534AC0FBF8C6D8F55917 /* Sources */,
+				925D5AD17F033759F9D4D9AC /* Frameworks */,
+				925D54B731BAD96951715505 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				925D5377FDD7CD87C05EE1D6 /* PBXTargetDependency */,
+			);
+			name = GAEChannelTests;
+			productName = GAEChannelTests;
+			productReference = 925D57EF13C1869FA10075FB /* GAEChannelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		925D56CA00A4A36F340D3995 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Chiwan Park";
+			};
+			buildConfigurationList = 925D5144F739E3B7F29491A7 /* Build configuration list for PBXProject "GAEChannel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 925D5FD4BAEC2B3201FED637;
+			productRefGroup = 925D55388E9C0530EF0C2A51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				925D5721DB3EF02D70A6DF85 /* GAEChannel */,
+				925D5FF13A10BAC4B70C0249 /* GAEChannelTests */,
+				409CC64F18F706F100781B75 /* Framework */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		925D54B731BAD96951715505 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				925D5B18C026FDE302B5F2EF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		409CC64D18F7051D00781B75 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n\n# Link the \"Current\" version to \"A\"\n/bin/ln -sfh A \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n";
+		};
+		409CC65518F7071400781B75 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=${PROJECT_NAME}\nSF_EXECUTABLE_PATH=\"lib${SF_TARGET_NAME}.a\"\nSF_WRAPPER_NAME=\"${SF_TARGET_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nelse\nSF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcrun xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nxcrun lipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		925D534AC0FBF8C6D8F55917 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				925D51AC7BE3BE035CAAFF0D /* GAEChannelTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		925D5AEC78C4A375C9311937 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				925D5B361CC6FFCF41901812 /* GAEChannel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		409CC65418F7070600781B75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 925D5721DB3EF02D70A6DF85 /* GAEChannel */;
+			targetProxy = 409CC65318F7070600781B75 /* PBXContainerItemProxy */;
+		};
+		925D5377FDD7CD87C05EE1D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 925D5721DB3EF02D70A6DF85 /* GAEChannel */;
+			targetProxy = 925D5826B8D264FF4A7D0ACE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		925D5AFE7DC3ADA06D630422 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				925D5193AF76D7BE6A9D67CB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		409CC65118F706F100781B75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		409CC65218F706F100781B75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		925D554B80FC8D3585358FE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 0.1;
+				DEAD_CODE_STRIPPING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRIP_STYLE = "non-global";
+			};
+			name = Debug;
+		};
+		925D59924B19D7935BC74C0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GAEChannel/GAEChannel-Prefix.pch";
+				INFOPLIST_FILE = "GAEChannelTests/GAEChannelTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		925D5AB510B97DAAEE0B6AD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GAEChannel/GAEChannel-Prefix.pch";
+				INFOPLIST_FILE = "GAEChannelTests/GAEChannelTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		925D5B1DBC16BB824A0AA6E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = "";
+				DEAD_CODE_STRIPPING = NO;
+				DSTROOT = /tmp/GAEChannel.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GAEChannel/GAEChannel-Prefix.pch";
+				OTHER_LDFLAGS = (
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+			};
+			name = Debug;
+		};
+		925D5C317BD790E72675E993 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 0.1;
+				DEAD_CODE_STRIPPING = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				STRIP_STYLE = "non-global";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		925D5F497CADE5C5C8C2018B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = "";
+				DEAD_CODE_STRIPPING = NO;
+				DSTROOT = /tmp/GAEChannel.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GAEChannel/GAEChannel-Prefix.pch";
+				OTHER_LDFLAGS = (
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		409CC65018F706F100781B75 /* Build configuration list for PBXAggregateTarget "Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				409CC65118F706F100781B75 /* Release */,
+				409CC65218F706F100781B75 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		925D5144F739E3B7F29491A7 /* Build configuration list for PBXProject "GAEChannel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				925D5C317BD790E72675E993 /* Release */,
+				925D554B80FC8D3585358FE6 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		925D5313C267264EB03F2256 /* Build configuration list for PBXNativeTarget "GAEChannelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				925D5AB510B97DAAEE0B6AD8 /* Release */,
+				925D59924B19D7935BC74C0A /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		925D5407EAC88D5F7A41F37A /* Build configuration list for PBXNativeTarget "GAEChannel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				925D5F497CADE5C5C8C2018B /* Release */,
+				925D5B1DBC16BB824A0AA6E8 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 925D56CA00A4A36F340D3995 /* Project object */;
+}
