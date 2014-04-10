@@ -14,6 +14,7 @@
 				409CC65518F7071400781B75 /* ShellScript */,
 			);
 			dependencies = (
+				409CC68B18F724F900781B75 /* PBXTargetDependency */,
 				409CC65418F7070600781B75 /* PBXTargetDependency */,
 			);
 			name = Framework;
@@ -24,8 +25,10 @@
 /* Begin PBXBuildFile section */
 		409CC64C18F7041900781B75 /* GAEChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 925D53DFB8D6D648CEBEF75B /* GAEChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		409CC64E18F7063E00781B75 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925D50E589E8B61CFDBDDD74 /* UIKit.framework */; };
+		409CC67F18F724E300781B75 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409CC65D18F7195F00781B75 /* CoreFoundation.framework */; };
+		409CC68518F724E300781B75 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 409CC68318F724E300781B75 /* InfoPlist.strings */; };
 		925D51AC7BE3BE035CAAFF0D /* GAEChannelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D595EBDFF2F84D2BA16AB /* GAEChannelTests.m */; };
-		925D51EF595ACDA5E45BBB85 /* GAEChannel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 925D53DFB8D6D648CEBEF75B /* GAEChannel.h */; };
+		925D51D600EACAD8ED788D03 /* view.html in Resources */ = {isa = PBXBuildFile; fileRef = 925D52C443AEF1F40A26AA44 /* view.html */; };
 		925D534E31D8E5EBEAC1A8CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925D50E589E8B61CFDBDDD74 /* UIKit.framework */; };
 		925D56111097DF7C52EBFFD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925D57F6C7ABBC15D5E14C54 /* Foundation.framework */; };
 		925D5B18C026FDE302B5F2EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 925D5AFE7DC3ADA06D630422 /* InfoPlist.strings */; };
@@ -43,6 +46,13 @@
 			remoteGlobalIDString = 925D5721DB3EF02D70A6DF85;
 			remoteInfo = GAEChannel;
 		};
+		409CC68A18F724F900781B75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 925D56CA00A4A36F340D3995 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 409CC67D18F724E300781B75;
+			remoteInfo = GAEChannelResources;
+		};
 		925D5826B8D264FF4A7D0ACE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 925D56CA00A4A36F340D3995 /* Project object */;
@@ -56,18 +66,23 @@
 		925D5ED3658F796C5EBBCA75 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
+			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				925D51EF595ACDA5E45BBB85 /* GAEChannel.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		409CC65D18F7195F00781B75 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		409CC67E18F724E300781B75 /* GAEChannel.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GAEChannel.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		409CC68218F724E300781B75 /* GAEChannelResources-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GAEChannelResources-Info.plist"; sourceTree = "<group>"; };
+		409CC68418F724E300781B75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		409CC68618F724E300781B75 /* GAEChannelResources-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GAEChannelResources-Prefix.pch"; sourceTree = "<group>"; };
 		925D50E589E8B61CFDBDDD74 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		925D5193AF76D7BE6A9D67CB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		925D52C443AEF1F40A26AA44 /* view.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = view.html; sourceTree = "<group>"; };
 		925D5326E64B594ED2110829 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		925D53DFB8D6D648CEBEF75B /* GAEChannel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAEChannel.h; sourceTree = "<group>"; };
 		925D544846BCB077FD79ECAE /* GAEChannel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GAEChannel.m; sourceTree = "<group>"; };
@@ -81,6 +96,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		409CC67B18F724E300781B75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				409CC67F18F724E300781B75 /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		925D5AD17F033759F9D4D9AC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -104,6 +127,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		409CC68018F724E300781B75 /* GAEChannelResources */ = {
+			isa = PBXGroup;
+			children = (
+				409CC68118F724E300781B75 /* Supporting Files */,
+				925D52C443AEF1F40A26AA44 /* view.html */,
+			);
+			path = GAEChannelResources;
+			sourceTree = "<group>";
+		};
+		409CC68118F724E300781B75 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				409CC68218F724E300781B75 /* GAEChannelResources-Info.plist */,
+				409CC68318F724E300781B75 /* InfoPlist.strings */,
+				409CC68618F724E300781B75 /* GAEChannelResources-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		925D50C9D07726DFAEA57FD3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,18 +163,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		925D54B709D1FC80337B228C /* assets */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = assets;
-			sourceTree = "<group>";
-		};
 		925D55388E9C0530EF0C2A51 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				925D5AA20B9A51A0C22F93D9 /* libGAEChannel.a */,
 				925D57EF13C1869FA10075FB /* GAEChannelTests.xctest */,
+				409CC67E18F724E300781B75 /* GAEChannel.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,7 +179,6 @@
 				925D50C9D07726DFAEA57FD3 /* Supporting Files */,
 				925D53DFB8D6D648CEBEF75B /* GAEChannel.h */,
 				925D544846BCB077FD79ECAE /* GAEChannel.m */,
-				925D54B709D1FC80337B228C /* assets */,
 			);
 			path = GAEChannel;
 			sourceTree = "<group>";
@@ -163,6 +198,7 @@
 				925D57F6C7ABBC15D5E14C54 /* Foundation.framework */,
 				925D5E31348BE231E1FC1899 /* XCTest.framework */,
 				925D50E589E8B61CFDBDDD74 /* UIKit.framework */,
+				409CC65D18F7195F00781B75 /* CoreFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -170,6 +206,7 @@
 		925D5FD4BAEC2B3201FED637 = {
 			isa = PBXGroup;
 			children = (
+				409CC68018F724E300781B75 /* GAEChannelResources */,
 				925D55388E9C0530EF0C2A51 /* Products */,
 				925D5DADDB123E320368300E /* Frameworks */,
 				925D5B0817105FACDF879F1A /* GAEChannel */,
@@ -192,6 +229,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		409CC67D18F724E300781B75 /* GAEChannelResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 409CC68718F724E300781B75 /* Build configuration list for PBXNativeTarget "GAEChannelResources" */;
+			buildPhases = (
+				409CC67A18F724E300781B75 /* Sources */,
+				409CC67B18F724E300781B75 /* Frameworks */,
+				409CC67C18F724E300781B75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GAEChannelResources;
+			productName = GAEChannelResources;
+			productReference = 409CC67E18F724E300781B75 /* GAEChannel.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		925D5721DB3EF02D70A6DF85 /* GAEChannel */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 925D5407EAC88D5F7A41F37A /* Build configuration list for PBXNativeTarget "GAEChannel" */;
@@ -252,11 +306,21 @@
 				925D5721DB3EF02D70A6DF85 /* GAEChannel */,
 				925D5FF13A10BAC4B70C0249 /* GAEChannelTests */,
 				409CC64F18F706F100781B75 /* Framework */,
+				409CC67D18F724E300781B75 /* GAEChannelResources */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		409CC67C18F724E300781B75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				409CC68518F724E300781B75 /* InfoPlist.strings in Resources */,
+				925D51D600EACAD8ED788D03 /* view.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		925D54B731BAD96951715505 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -297,6 +361,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		409CC67A18F724E300781B75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		925D534AC0FBF8C6D8F55917 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -321,6 +392,11 @@
 			target = 925D5721DB3EF02D70A6DF85 /* GAEChannel */;
 			targetProxy = 409CC65318F7070600781B75 /* PBXContainerItemProxy */;
 		};
+		409CC68B18F724F900781B75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 409CC67D18F724E300781B75 /* GAEChannelResources */;
+			targetProxy = 409CC68A18F724F900781B75 /* PBXContainerItemProxy */;
+		};
 		925D5377FDD7CD87C05EE1D6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 925D5721DB3EF02D70A6DF85 /* GAEChannel */;
@@ -329,6 +405,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		409CC68318F724E300781B75 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				409CC68418F724E300781B75 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		925D5AFE7DC3ADA06D630422 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -351,6 +435,46 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		409CC68818F724E300781B75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GAEChannelResources/GAEChannelResources-Prefix.pch";
+				INFOPLIST_FILE = "GAEChannelResources/GAEChannelResources-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = GAEChannel;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		409CC68918F724E300781B75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GAEChannelResources/GAEChannelResources-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GAEChannelResources/GAEChannelResources-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = GAEChannel;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
@@ -433,10 +557,9 @@
 				DSTROOT = /tmp/GAEChannel.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GAEChannel/GAEChannel-Prefix.pch";
-				OTHER_LDFLAGS = (
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/${PROJECT_NAME}";
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = "non-global";
 			};
@@ -485,10 +608,9 @@
 				DSTROOT = /tmp/GAEChannel.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GAEChannel/GAEChannel-Prefix.pch";
-				OTHER_LDFLAGS = (
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/${PROJECT_NAME}";
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = "non-global";
 			};
@@ -502,6 +624,15 @@
 			buildConfigurations = (
 				409CC65118F706F100781B75 /* Release */,
 				409CC65218F706F100781B75 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		409CC68718F724E300781B75 /* Build configuration list for PBXNativeTarget "GAEChannelResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				409CC68818F724E300781B75 /* Release */,
+				409CC68918F724E300781B75 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

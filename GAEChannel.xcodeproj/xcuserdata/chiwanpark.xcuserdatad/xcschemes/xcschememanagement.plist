@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>GAEChannelResources.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>GAEChannelTests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,16 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>409CC64F18F706F100781B75</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>409CC65B18F7195F00781B75</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>409CC67D18F724E300781B75</key>
 		<dict>
 			<key>primary</key>
 			<true/>

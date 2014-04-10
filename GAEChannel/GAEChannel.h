@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIWebView.h>
 
-@interface GAEChannel : NSObject {
+@interface GAEChannel : NSObject <UIWebViewDelegate> {
   UIWebView *webView;
 }
 
