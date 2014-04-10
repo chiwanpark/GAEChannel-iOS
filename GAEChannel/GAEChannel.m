@@ -11,6 +11,8 @@
 
 @implementation GAEChannel
 
+#pragma mark Initializer method
+
 - (instancetype)initWithServerURL:(NSString *)url {
   self = [super init];
 
@@ -34,6 +36,18 @@
 + (instancetype)channelWithServerURL:(NSString *)url {
   return [[self alloc] initWithServerURL:url];
 }
+
+#pragma mark Google Channel API
+
+- (void)connectWithToken:(NSString *)token {
+  if (!initialized) {
+    return;
+  }
+
+  NSLog(@"connect: %@ WithKey: %@", serverURL, token);
+}
+
+#pragma mark Helper method for GAEChannel Implementation
 
 + (NSBundle *)frameworkBundle {
   static NSBundle *frameworkBundle = nil;
@@ -59,13 +73,7 @@
   [webView loadRequest:request];
 }
 
-- (void)connectWithToken:(NSString *)token {
-  if (!initialized) {
-    return;
-  }
-
-  NSLog(@"connect: %@ WithKey: %@", serverURL, token);
-}
+#pragma mark UIWebViewDelegate method
 
 - (void)webViewDidFinishLoad:(UIWebView *)ignored {
   NSString *function = [NSString stringWithFormat:@"loadJSAPI('%@');", serverURL];
