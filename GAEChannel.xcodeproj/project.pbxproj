@@ -31,7 +31,7 @@
 		925D51D600EACAD8ED788D03 /* view.html in Resources */ = {isa = PBXBuildFile; fileRef = 925D52C443AEF1F40A26AA44 /* view.html */; };
 		925D534E31D8E5EBEAC1A8CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925D50E589E8B61CFDBDDD74 /* UIKit.framework */; };
 		925D56111097DF7C52EBFFD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925D57F6C7ABBC15D5E14C54 /* Foundation.framework */; };
-		925D58132EB2169D7CAEFFAD /* GAEChannelDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 925D51B2A4D2DBCB3684673A /* GAEChannelDelegate.h */; };
+		925D58132EB2169D7CAEFFAD /* GAEChannelDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 925D51B2A4D2DBCB3684673A /* GAEChannelDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		925D5B18C026FDE302B5F2EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 925D5AFE7DC3ADA06D630422 /* InfoPlist.strings */; };
 		925D5B361CC6FFCF41901812 /* GAEChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D544846BCB077FD79ECAE /* GAEChannel.m */; };
 		925D5CCDF7B4ECBBA2D68C97 /* libGAEChannel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 925D5AA20B9A51A0C22F93D9 /* libGAEChannel.a */; };
@@ -639,6 +639,7 @@
 				409CC68918F724E300781B75 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		925D5144F739E3B7F29491A7 /* Build configuration list for PBXProject "GAEChannel" */ = {
 			isa = XCConfigurationList;
