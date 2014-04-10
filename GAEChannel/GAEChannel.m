@@ -20,7 +20,7 @@
     // initialize instance variables
     initialized = FALSE;
     serverURL = url;
-    scheme = @"ios-gaeChannel://";
+    scheme = @"ios-gaechannel://";
     [self setDelegate:nil];
 
     // initialize hidden webview object
@@ -58,8 +58,6 @@
     NSString *mainBundlePath = [[NSBundle mainBundle] resourcePath];
     NSString *frameworkBundlePath = [mainBundlePath stringByAppendingPathComponent:@"GAEChannel.bundle"];
 
-    NSLog(@"frameworkBundlePath: %@", frameworkBundlePath);
-
     frameworkBundle = [NSBundle bundleWithPath:frameworkBundlePath];
   });
 
@@ -68,18 +66,59 @@
 
 - (void)loadViewPage {
   NSURL *url = [[GAEChannel frameworkBundle] URLForResource:@"view" withExtension:@"html"];
-  NSLog(@"loadViewPage: %@", [url absoluteURL]);
   NSURLRequest *request = [NSURLRequest requestWithURL:url];
 
   [webView loadRequest:request];
 }
 
+- (NSDictionary *)parseQuery:(NSString *)query {
+  NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+
+  for (NSString *param in [query componentsSeparatedByString:@"&"]) {
+    NSArray *keyValue = [param componentsSeparatedByString:@"="];
+
+    if ([keyValue count] == 2) {
+      NSString *value = [keyValue[1] stringByReplacingOccurrencesOfString:@"+" withString:@" "];
+      value = [value stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+
+      [params setValue:value forKey:keyValue[0]];
+    }
+  }
+
+  return params;
+}
+
 #pragma mark UIWebViewDelegate method
 
 - (void)webViewDidFinishLoad:(UIWebView *)ignored {
-  NSString *cmds = [NSString stringWithFormat:@"loadJSAPI('%@');setScheme('%@');", serverURL, scheme];
+  NSString *cmds = [NSString stringWithFormat:@"setScheme('%@');loadJSAPI('%@');", scheme, serverURL];
   [webView stringByEvaluatingJavaScriptFromString:cmds];
   initialized = TRUE;
+}
+
+- (BOOL)webView:(UIWebView *)ignored shouldStartLoadWithRequest:(NSURLRequest *)request
+ navigationType:(UIWebViewNavigationType)navigationType {
+  NSURL *url = [request URL];
+
+  if ([scheme hasPrefix:[url scheme]]) {
+    NSString *selector = [url host];
+    NSDictionary *params = [self parseQuery:[url query]];
+
+    if ([selector isEqualToString:@"onOpen"]) {
+      [[self delegate] onOpen];
+    } else if ([selector isEqualToString:@"onClose"]) {
+      [[self delegate] onClose];
+    } else if ([selector isEqualToString:@"onMessage"]) {
+      [[self delegate] onMessage:[params objectForKey:@"message"]];
+    } else if ([selector isEqualToString:@"onError"]) {
+      [[self delegate] onError:[[params objectForKey:@"code"] intValue]
+               WithDescription:[params objectForKey:@"description"]];
+    }
+
+    return NO;
+  }
+
+  return YES;
 }
 
 @end

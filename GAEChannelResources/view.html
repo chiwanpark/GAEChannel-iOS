@@ -24,6 +24,21 @@
       head.appendChild(script);
     }
 
+    function __callObjCFunction(selector, params) {
+      var href = scheme + selector;
+      var query = '';
+
+      for (var key in params) {
+        query += key + '=' + encodeURIComponent(params[key]) + '&';
+      }
+
+      if (query.length > 0) {
+        href += '?' + query;
+      }
+
+      location.href = href;
+    }
+
     function setScheme(newScheme) {
       scheme = newScheme;
     }
