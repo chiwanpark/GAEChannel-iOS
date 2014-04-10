@@ -31,6 +31,7 @@
 		925D51D600EACAD8ED788D03 /* view.html in Resources */ = {isa = PBXBuildFile; fileRef = 925D52C443AEF1F40A26AA44 /* view.html */; };
 		925D534E31D8E5EBEAC1A8CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925D50E589E8B61CFDBDDD74 /* UIKit.framework */; };
 		925D56111097DF7C52EBFFD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925D57F6C7ABBC15D5E14C54 /* Foundation.framework */; };
+		925D58132EB2169D7CAEFFAD /* GAEChannelDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 925D51B2A4D2DBCB3684673A /* GAEChannelDelegate.h */; };
 		925D5B18C026FDE302B5F2EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 925D5AFE7DC3ADA06D630422 /* InfoPlist.strings */; };
 		925D5B361CC6FFCF41901812 /* GAEChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D544846BCB077FD79ECAE /* GAEChannel.m */; };
 		925D5CCDF7B4ECBBA2D68C97 /* libGAEChannel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 925D5AA20B9A51A0C22F93D9 /* libGAEChannel.a */; };
@@ -82,6 +83,7 @@
 		409CC68618F724E300781B75 /* GAEChannelResources-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GAEChannelResources-Prefix.pch"; sourceTree = "<group>"; };
 		925D50E589E8B61CFDBDDD74 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		925D5193AF76D7BE6A9D67CB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		925D51B2A4D2DBCB3684673A /* GAEChannelDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAEChannelDelegate.h; sourceTree = "<group>"; };
 		925D52C443AEF1F40A26AA44 /* view.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = view.html; sourceTree = "<group>"; };
 		925D5326E64B594ED2110829 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		925D53DFB8D6D648CEBEF75B /* GAEChannel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAEChannel.h; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				925D50C9D07726DFAEA57FD3 /* Supporting Files */,
 				925D53DFB8D6D648CEBEF75B /* GAEChannel.h */,
 				925D544846BCB077FD79ECAE /* GAEChannel.m */,
+				925D51B2A4D2DBCB3684673A /* GAEChannelDelegate.h */,
 			);
 			path = GAEChannel;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				409CC64C18F7041900781B75 /* GAEChannel.h in Headers */,
+				925D58132EB2169D7CAEFFAD /* GAEChannelDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

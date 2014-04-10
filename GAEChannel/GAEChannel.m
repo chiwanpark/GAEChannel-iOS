@@ -18,6 +18,7 @@
     // initialize instance variables
     initialized = FALSE;
     serverURL = url;
+    [self setDelegate:nil];
 
     // initialize hidden webview object
     webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];

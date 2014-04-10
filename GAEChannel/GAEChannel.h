@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIWebView.h>
+#import "GAEChannelDelegate.h"
 
 @interface GAEChannel : NSObject <UIWebViewDelegate> {
   NSString *serverURL;
   UIWebView *webView;
   BOOL initialized;
 }
+
+@property(strong, nonatomic) id <NSObject, GAEChannelDelegate> delegate;
 
 - (instancetype)initWithServerURL:(NSString *)url;
 
