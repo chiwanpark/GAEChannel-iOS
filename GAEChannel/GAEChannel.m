@@ -11,16 +11,27 @@
 
 @implementation GAEChannel
 
-- (id)init {
+- (instancetype)initWithServerURL:(NSString *)url {
   self = [super init];
 
   if (self) {
+    // initialize instance variables
+    initialized = FALSE;
+    serverURL = url;
+
+    // initialize hidden webview object
     webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
     [webView setDelegate:self];
+
+    // load view page
     [self loadViewPage];
   }
 
   return self;
+}
+
++ (instancetype)channelWithServerURL:(NSString *)url {
+  return [[self alloc] initWithServerURL:url];
 }
 
 + (NSBundle *)frameworkBundle {
@@ -47,13 +58,18 @@
   [webView loadRequest:request];
 }
 
-- (void)connect:(NSString *)serverURL WithKey:(NSString *)channelKey {
-  NSLog(@"connect: %@ WithKey: %@", serverURL, channelKey);
+- (void)connectWithToken:(NSString *)token {
+  if (!initialized) {
+    return;
+  }
+
+  NSLog(@"connect: %@ WithKey: %@", serverURL, token);
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)ignored {
-  [webView stringByEvaluatingJavaScriptFromString:@"init('http://localhost:8080');"];
+  NSString *function = [NSString stringWithFormat:@"loadJSAPI('%@');", serverURL];
+  [webView stringByEvaluatingJavaScriptFromString:function];
+  initialized = TRUE;
 }
-
 
 @end

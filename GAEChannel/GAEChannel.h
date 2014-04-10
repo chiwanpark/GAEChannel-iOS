@@ -10,10 +10,14 @@
 #import <UIKit/UIWebView.h>
 
 @interface GAEChannel : NSObject <UIWebViewDelegate> {
+  NSString *serverURL;
   UIWebView *webView;
+  BOOL initialized;
 }
 
-- (id)init;
+- (instancetype)initWithServerURL:(NSString *)url;
 
-- (void)connect:(NSString *)serverURL WithKey:(NSString *)channelKey;
++ (instancetype)channelWithServerURL:(NSString *)url;
+
+- (void)connectWithToken:(NSString *)token;
 @end
