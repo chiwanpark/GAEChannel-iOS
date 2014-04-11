@@ -5,9 +5,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class GAEChannel;
+
 @protocol GAEChannelDelegate <NSObject>
 
-- (void)initialized;
+- (void)channelInitialized:(GAEChannel *)channel;
 
 - (void)onOpen;
 

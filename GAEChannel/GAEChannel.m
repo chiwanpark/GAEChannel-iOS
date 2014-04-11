@@ -98,7 +98,7 @@
   [webView stringByEvaluatingJavaScriptFromString:cmds];
   initialized = TRUE;
 
-  [channelDelegate initialized];
+  [channelDelegate channelInitialized:self];
 }
 
 - (BOOL)webView:(UIWebView *)ignored shouldStartLoadWithRequest:(NSURLRequest *)request
