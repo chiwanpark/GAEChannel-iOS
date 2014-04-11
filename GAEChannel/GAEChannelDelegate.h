@@ -7,6 +7,8 @@
 
 @protocol GAEChannelDelegate <NSObject>
 
+- (void)initialized;
+
 - (void)onOpen;
 
 - (void)onMessage:(NSString *)message;

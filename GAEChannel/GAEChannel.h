@@ -15,13 +15,12 @@
   NSString *serverURL;
   UIWebView *webView;
   BOOL initialized;
+  id <NSObject, GAEChannelDelegate> channelDelegate;
 }
 
-@property(strong, nonatomic) id <NSObject, GAEChannelDelegate> delegate;
+- (instancetype)initWithServerURL:(NSString *)url Delegate:(id <NSObject, GAEChannelDelegate>)delegate;
 
-- (instancetype)initWithServerURL:(NSString *)url;
-
-+ (instancetype)channelWithServerURL:(NSString *)url;
++ (instancetype)channelWithServerURL:(NSString *)url Delegate:(id <NSObject, GAEChannelDelegate>)delegate;
 
 - (void)connectWithToken:(NSString *)token;
 @end

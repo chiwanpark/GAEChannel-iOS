@@ -13,7 +13,7 @@
 
 #pragma mark Initializer method
 
-- (instancetype)initWithServerURL:(NSString *)url {
+- (instancetype)initWithServerURL:(NSString *)url Delegate:(id <NSObject, GAEChannelDelegate>)delegate {
   self = [super init];
 
   if (self) {
@@ -21,7 +21,7 @@
     initialized = FALSE;
     serverURL = url;
     scheme = @"ios-gaechannel://";
-    [self setDelegate:nil];
+    channelDelegate = delegate;
 
     // initialize hidden webview object
     webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
@@ -34,14 +34,15 @@
   return self;
 }
 
-+ (instancetype)channelWithServerURL:(NSString *)url {
-  return [[self alloc] initWithServerURL:url];
++ (instancetype)channelWithServerURL:(NSString *)url Delegate:(id <NSObject, GAEChannelDelegate>)delegate {
+  return [[self alloc] initWithServerURL:url Delegate:delegate];
 }
 
 #pragma mark Google Channel API
 
 - (void)connectWithToken:(NSString *)token {
   if (!initialized) {
+    NSLog(@"GAEChannel is uninitialized!");
     return;
   }
 
@@ -94,6 +95,8 @@
   NSString *cmds = [NSString stringWithFormat:@"setScheme('%@');loadJSAPI('%@');", scheme, serverURL];
   [webView stringByEvaluatingJavaScriptFromString:cmds];
   initialized = TRUE;
+
+  [channelDelegate initialized];
 }
 
 - (BOOL)webView:(UIWebView *)ignored shouldStartLoadWithRequest:(NSURLRequest *)request
@@ -105,20 +108,18 @@
     NSDictionary *params = [self parseQuery:[url query]];
 
     if ([selector isEqualToString:@"onOpen"]) {
-      [[self delegate] onOpen];
+      [channelDelegate onOpen];
     } else if ([selector isEqualToString:@"onClose"]) {
-      [[self delegate] onClose];
+      [channelDelegate onClose];
     } else if ([selector isEqualToString:@"onMessage"]) {
-      [[self delegate] onMessage:[params objectForKey:@"message"]];
+      [channelDelegate onMessage:[params objectForKey:@"message"]];
     } else if ([selector isEqualToString:@"onError"]) {
-      [[self delegate] onError:[[params objectForKey:@"code"] intValue]
+      [channelDelegate onError:[[params objectForKey:@"code"] intValue]
                WithDescription:[params objectForKey:@"description"]];
     }
-
-    return NO;
   }
 
-  return YES;
+  return NO;
 }
 
 @end
