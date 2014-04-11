@@ -10,6 +10,8 @@ build/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata
+xcuserdata/**
+**xcuserstate
 *.xccheckout
 *.moved-aside
 DerivedData
