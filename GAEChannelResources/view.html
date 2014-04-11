@@ -5,6 +5,8 @@
   <title>GAEChannel View</title>
   <script type="text/javascript">
     var scheme = '';
+    var channel = null;
+    var socket = null;
 
     function init(serverURL) {
       var xhrObj = new XMLHttpRequest();
@@ -24,6 +26,16 @@
       head.appendChild(script);
     }
 
+    function openChannel(token) {
+      channel = new goog.appengine.Channel(token);
+      socket = channel.open();
+
+      socket.onopen = __onOpen;
+      socket.onclose = __onClose;
+      socket.onmessage = __onMessage;
+      socket.onerror = __onError;
+    }
+
     function __callObjCFunction(selector, params) {
       var href = scheme + selector;
       var query = '';
@@ -37,6 +49,22 @@
       }
 
       location.href = href;
+    }
+
+    function __onOpen() {
+      __callObjCFunction('onOpen', []);
+    }
+
+    function __onClose() {
+      __callObjCFunction('onClose', []);
+    }
+
+    function __onMessage(message) {
+      __callObjCFunction('onMessage', message.data);
+    }
+
+    function __onError(error) {
+      __callObjCFunction('onError', error);
     }
 
     function setScheme(newScheme) {
