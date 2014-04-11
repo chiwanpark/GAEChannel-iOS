@@ -47,6 +47,8 @@
   }
 
   NSLog(@"connect: %@ WithKey: %@", serverURL, token);
+  NSString *script = [NSString stringWithFormat:@"openChannel('%@');", token];
+  [webView stringByEvaluatingJavaScriptFromString:script];
 }
 
 #pragma mark Helper method for GAEChannel Implementation
