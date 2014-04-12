@@ -105,7 +105,7 @@
  navigationType:(UIWebViewNavigationType)navigationType {
   NSURL *url = [request URL];
 
-  if ([scheme hasPrefix:[url scheme]]) {
+  if (url && [scheme hasPrefix:[url scheme]]) {
     NSString *selector = [url host];
     NSDictionary *params = [self parseQuery:[url query]];
 
