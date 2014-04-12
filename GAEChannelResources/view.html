@@ -45,7 +45,9 @@
       var query = '';
 
       for (var key in params) {
-        query += key + '=' + encodeURIComponent(params[key]) + '&';
+        if (params.hasOwnProperty(key)) {
+          query += key + '=' + encodeURIComponent(params[key]) + '&';
+        }
       }
 
       if (query.length > 0) {
