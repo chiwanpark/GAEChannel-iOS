@@ -43,6 +43,8 @@
 		409CC6E618F8422A00781B75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CC6E518F8422A00781B75 /* main.m */; };
 		409CC6EA18F8422A00781B75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CC6E918F8422A00781B75 /* AppDelegate.m */; };
 		409CC6EC18F8422A00781B75 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 409CC6EB18F8422A00781B75 /* Images.xcassets */; };
+		409CC70918F9457600781B75 /* GAEChannel.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 409CC67E18F724E300781B75 /* GAEChannel.bundle */; };
+		409CC70E18F945EC00781B75 /* GAEChannel.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 409CC67E18F724E300781B75 /* GAEChannel.bundle */; };
 		925D51A6DD5B5728B0884A1B /* XCTestCase+AsyncTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D5BD6AA2D0684C9107559 /* XCTestCase+AsyncTesting.m */; };
 		925D51AC7BE3BE035CAAFF0D /* GAEChannelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D595EBDFF2F84D2BA16AB /* GAEChannelTests.m */; };
 		925D51D600EACAD8ED788D03 /* view.html in Resources */ = {isa = PBXBuildFile; fileRef = 925D52C443AEF1F40A26AA44 /* view.html */; };
@@ -79,6 +81,20 @@
 			remoteInfo = GAEChannelTestApp;
 		};
 		409CC70718F842EE00781B75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 925D56CA00A4A36F340D3995 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 409CC67D18F724E300781B75;
+			remoteInfo = GAEChannelResources;
+		};
+		409CC70A18F9459300781B75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 925D56CA00A4A36F340D3995 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 925D5721DB3EF02D70A6DF85;
+			remoteInfo = GAEChannel;
+		};
+		409CC70C18F9459300781B75 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 925D56CA00A4A36F340D3995 /* Project object */;
 			proxyType = 1;
@@ -386,6 +402,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				409CC70B18F9459300781B75 /* PBXTargetDependency */,
+				409CC70D18F9459300781B75 /* PBXTargetDependency */,
 			);
 			name = GAEChannelTestApp;
 			productName = GAEChannelTestApp;
@@ -479,6 +497,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				409CC70918F9457600781B75 /* GAEChannel.bundle in Resources */,
 				409CC6E418F8422A00781B75 /* InfoPlist.strings in Resources */,
 				409CC6EC18F8422A00781B75 /* Images.xcassets in Resources */,
 			);
@@ -488,6 +507,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				409CC70E18F945EC00781B75 /* GAEChannel.bundle in Resources */,
 				925D5B18C026FDE302B5F2EF /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,6 +609,16 @@
 			target = 409CC67D18F724E300781B75 /* GAEChannelResources */;
 			targetProxy = 409CC70718F842EE00781B75 /* PBXContainerItemProxy */;
 		};
+		409CC70B18F9459300781B75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 925D5721DB3EF02D70A6DF85 /* GAEChannel */;
+			targetProxy = 409CC70A18F9459300781B75 /* PBXContainerItemProxy */;
+		};
+		409CC70D18F9459300781B75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 409CC67D18F724E300781B75 /* GAEChannelResources */;
+			targetProxy = 409CC70C18F9459300781B75 /* PBXContainerItemProxy */;
+		};
 		925D5377FDD7CD87C05EE1D6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 925D5721DB3EF02D70A6DF85 /* GAEChannel */;
@@ -652,7 +682,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = GAEChannel;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
@@ -673,7 +704,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = GAEChannel;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
