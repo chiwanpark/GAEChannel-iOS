@@ -16,14 +16,18 @@
     }
 
     function loadJSAPI(serverURL) {
-      var head = document.getElementsByTagName('head')[0];
-      var script = document.createElement('script');
+      var xhr = new XMLHttpRequest();
+      var src = serverURL + '/_ah/channel/jsapi';
 
-      script.type = 'text/javascript';
-      script.id = 'gsApi';
-      script.src = serverURL + '/_ah/channel/jsapi';
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && (xhr.status == 304 || xhr.status == 200)) {
+          eval(xhr.responseText);
+          __callObjCFunction('channelInitialized', {});
+        }
+      };
 
-      head.appendChild(script);
+      xhr.open('GET', src);
+      xhr.send(null);
     }
 
     function openChannel(token) {
@@ -52,11 +56,11 @@
     }
 
     function __onOpen() {
-      __callObjCFunction('onOpen', []);
+      __callObjCFunction('onOpen', {});
     }
 
     function __onClose() {
-      __callObjCFunction('onClose', []);
+      __callObjCFunction('onClose', {});
     }
 
     function __onMessage(message) {

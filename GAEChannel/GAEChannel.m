@@ -96,9 +96,6 @@
 - (void)webViewDidFinishLoad:(UIWebView *)ignored {
   NSString *cmds = [NSString stringWithFormat:@"setScheme('%@');loadJSAPI('%@');", scheme, serverURL];
   [webView stringByEvaluatingJavaScriptFromString:cmds];
-  initialized = TRUE;
-
-  [channelDelegate channelInitialized:self];
 }
 
 - (BOOL)webView:(UIWebView *)ignored shouldStartLoadWithRequest:(NSURLRequest *)request
@@ -118,10 +115,15 @@
     } else if ([selector isEqualToString:@"onError"]) {
       [channelDelegate onError:[[params objectForKey:@"code"] intValue]
                WithDescription:[params objectForKey:@"description"]];
+    } else if ([selector isEqualToString:@"channelInitialized"]) {
+      initialized = TRUE;
+      [channelDelegate channelInitialized:self];
     }
+
+    return NO;
   }
 
-  return NO;
+  return YES;
 }
 
 @end
