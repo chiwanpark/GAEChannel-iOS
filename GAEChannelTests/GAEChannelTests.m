@@ -16,6 +16,7 @@
   GAEChannel *channel;
   AFHTTPRequestOperationManager *manager;
   NSDictionary *params;
+  NSString *token;
 }
 @end
 
@@ -26,7 +27,7 @@
 
   baseURL = @"http://localhost:8080";
   manager = [AFHTTPRequestOperationManager manager];
-  params = @{@"client_id": [[NSUUID UUID] UUIDString]};
+  params = @{@"client_id" : [[NSUUID UUID] UUIDString]};
 }
 
 - (void)tearDown {
@@ -40,9 +41,8 @@
   [manager POST:url
      parameters:params
         success:^(AFHTTPRequestOperation *operation, id responseObject) {
-          NSString *token = [((NSDictionary *) responseObject) objectForKey:@"token"];
+          token = [((NSDictionary *) responseObject) objectForKey:@"token"];
           channel = [GAEChannel channelWithServerURL:baseURL Delegate:self];
-          [channel connectWithToken:token];
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     NSLog(@"%s: failed on token acquiring", __PRETTY_FUNCTION__);
     [self notify:XCTAsyncTestCaseStatusFailed];
@@ -51,10 +51,12 @@
 
 - (void)channelInitialized:(GAEChannel *)ignored {
   NSLog(@"Google Channel API is initialized");
+  [channel connectWithToken:token];
 }
 
 - (void)onOpen {
   NSLog(@"GAEChannel Opened");
+  [self notify:XCTAsyncTestCaseStatusSucceeded];
 }
 
 - (void)onMessage:(NSString *)message {
