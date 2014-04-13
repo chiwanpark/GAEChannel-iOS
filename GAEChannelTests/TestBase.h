@@ -4,12 +4,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GAEChannelDelegate.h"
 
 @class XCTestCase;
 @class GAEChannel;
 
 
-@interface TestBase : NSObject {
+@interface TestBase : NSObject <GAEChannelDelegate> {
   XCTestCase *testCase;
   NSString *serverURL;
   NSString *clientId;
