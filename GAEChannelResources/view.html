@@ -32,7 +32,12 @@
 
     function openChannel(token) {
       channel = new goog.appengine.Channel(token);
-      socket = channel.open();
+      socket = channel.open({
+        'onopen': __onOpen,
+        'onclose': __onClose,
+        'onmessage': __onMessage,
+        'onerror': __onError
+      });
 
       socket.onopen = __onOpen;
       socket.onclose = __onClose;
@@ -73,7 +78,7 @@
     }
 
     function __onMessage(message) {
-      __callObjCFunction('onMessage', message.data);
+      __callObjCFunction('onMessage', {'message': message.data});
     }
 
     function __onError(error) {
