@@ -51,6 +51,10 @@
   [webView stringByEvaluatingJavaScriptFromString:script];
 }
 
+- (void)close {
+  [webView stringByEvaluatingJavaScriptFromString:@"closeChannel();"];
+}
+
 #pragma mark Helper method for GAEChannel Implementation
 
 + (NSBundle *)frameworkBundle {

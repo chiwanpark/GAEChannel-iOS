@@ -23,4 +23,6 @@
 + (instancetype)channelWithServerURL:(NSString *)url Delegate:(id <NSObject, GAEChannelDelegate>)delegate;
 
 - (void)connectWithToken:(NSString *)token;
+
+- (void)close;
 @end

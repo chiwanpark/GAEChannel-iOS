@@ -40,6 +40,12 @@
       socket.onerror = __onError;
     }
 
+    function closeChannel() {
+      if (socket) {
+        socket.close();
+      }
+    }
+
     function __callObjCFunction(selector, params) {
       var href = scheme + selector;
       var query = '';
@@ -62,6 +68,7 @@
     }
 
     function __onClose() {
+      socket = null;
       __callObjCFunction('onClose', {});
     }
 
