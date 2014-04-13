@@ -8,5 +8,5 @@
 #import "GAEChannelDelegate.h"
 
 
-@interface CloseTestBase : TestBase <GAEChannelDelegate>
+@interface CloseTest : TestBase <GAEChannelDelegate>
 @end

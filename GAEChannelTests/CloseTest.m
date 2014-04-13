@@ -1,10 +1,15 @@
 //
-// Created by Chiwan Park on 4/13/14.
+// Created by Chiwan Park on 4/14/14.
 // Copyright (c) 2014 Chiwan Park. All rights reserved.
 //
-#import "OpenTestBase.h"
 
-@implementation OpenTestBase {
+#import "CloseTest.h"
+#import "GAEChannel.h"
+#import "XCTestCase+AsyncTesting.h"
+#import "AFNetworking.h"
+
+
+@implementation CloseTest {
 
 }
 
@@ -24,14 +29,21 @@
   ];
 }
 
+
 - (void)channelInitialized:(GAEChannel *)ignored {
   [super channelInitialized:ignored];
   [channel connectWithToken:token];
 }
 
-- (void)onOpen {
-  [super onOpen];
+- (void)onClose {
+  [super onClose];
   [testCase notify:XCTAsyncTestCaseStatusSucceeded];
 }
+
+- (void)onOpen {
+  [super onOpen];
+  [channel close];
+}
+
 
 @end
