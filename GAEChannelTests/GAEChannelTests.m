@@ -10,6 +10,7 @@
 #import "XCTestCase+AsyncTesting.h"
 #import "OpenTest.h"
 #import "CloseTest.h"
+#import "ReceiveMessageTest.h"
 
 @interface GAEChannelTests : XCTestCase {
   NSString *serverURL;
@@ -29,15 +30,21 @@
 }
 
 - (void)testChannelOpen {
-  OpenTest *testBase = [[OpenTest alloc] initWithTestCase:self AndServerURL:serverURL];
+  OpenTest *test = [[OpenTest alloc] initWithTestCase:self AndServerURL:serverURL];
 
-  [testBase start];
+  [test start];
 }
 
 - (void)testChannelClose {
-  CloseTest *testBase = [[CloseTest alloc] initWithTestCase:self AndServerURL:serverURL];
+  CloseTest *test = [[CloseTest alloc] initWithTestCase:self AndServerURL:serverURL];
 
-  [testBase start];
+  [test start];
+}
+
+- (void)testReceiveMessage {
+  ReceiveMessageTest *test = [[ReceiveMessageTest alloc] initWithTestCase:self AndServerURL:serverURL];
+
+  [test start];
 }
 
 @end

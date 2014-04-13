@@ -58,6 +58,7 @@
 		925D5B361CC6FFCF41901812 /* GAEChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D544846BCB077FD79ECAE /* GAEChannel.m */; };
 		925D5CCDF7B4ECBBA2D68C97 /* libGAEChannel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 925D5AA20B9A51A0C22F93D9 /* libGAEChannel.a */; };
 		925D5DD28F3BCCDDD61AE7F0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925D5E31348BE231E1FC1899 /* XCTest.framework */; };
+		925D5E1004117FF0762B713D /* ReceiveMessageTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D547736D934875D210A5E /* ReceiveMessageTest.m */; };
 		925D5E7F2671521BD6077162 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925D57F6C7ABBC15D5E14C54 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -162,11 +163,13 @@
 		925D50E589E8B61CFDBDDD74 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		925D5193AF76D7BE6A9D67CB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		925D51B2A4D2DBCB3684673A /* GAEChannelDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAEChannelDelegate.h; sourceTree = "<group>"; };
+		925D523B6D26AFA41D52611F /* ReceiveMessageTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiveMessageTest.h; sourceTree = "<group>"; };
 		925D52C443AEF1F40A26AA44 /* view.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = view.html; sourceTree = "<group>"; };
 		925D52EBE47D9EFF830A8325 /* CloseTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloseTest.h; sourceTree = "<group>"; };
 		925D5326E64B594ED2110829 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		925D53DFB8D6D648CEBEF75B /* GAEChannel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAEChannel.h; sourceTree = "<group>"; };
 		925D544846BCB077FD79ECAE /* GAEChannel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GAEChannel.m; sourceTree = "<group>"; };
+		925D547736D934875D210A5E /* ReceiveMessageTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiveMessageTest.m; sourceTree = "<group>"; };
 		925D55066A75882EFF55F1C6 /* TestBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestBase.m; sourceTree = "<group>"; };
 		925D569A4B8FBB811F2F2DE0 /* GAEChannel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GAEChannel-Prefix.pch"; sourceTree = "<group>"; };
 		925D572907C794C2C2E389B8 /* TestBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestBase.h; sourceTree = "<group>"; };
@@ -345,6 +348,8 @@
 				925D5C54155377FF1E551FA8 /* OpenTest.h */,
 				925D580AB521C7402640B44B /* CloseTest.m */,
 				925D52EBE47D9EFF830A8325 /* CloseTest.h */,
+				925D547736D934875D210A5E /* ReceiveMessageTest.m */,
+				925D523B6D26AFA41D52611F /* ReceiveMessageTest.h */,
 			);
 			path = GAEChannelTests;
 			sourceTree = "<group>";
@@ -593,6 +598,7 @@
 				925D5031255ABF7F9C6DB7F7 /* OpenTest.m in Sources */,
 				925D57F23948CCDBA9362ACA /* TestBase.m in Sources */,
 				925D599FDCEBFD83D1954EA3 /* CloseTest.m in Sources */,
+				925D5E1004117FF0762B713D /* ReceiveMessageTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
