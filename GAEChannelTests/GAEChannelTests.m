@@ -21,11 +21,11 @@
 
 - (void)setUp {
   [super setUp];
-  serverURL = @"http://localhost:8080";
+  serverURL = @"http://gaechannel-ios.appspot.com";
 }
 
 - (void)tearDown {
-  [self waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:20];
+  [self waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:60];
   [super tearDown];
 }
 
