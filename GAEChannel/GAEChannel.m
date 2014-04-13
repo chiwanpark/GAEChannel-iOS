@@ -73,9 +73,12 @@
 
 - (void)loadViewPage {
   NSURL *url = [[GAEChannel frameworkBundle] URLForResource:@"view" withExtension:@"html"];
-  NSURLRequest *request = [NSURLRequest requestWithURL:url];
+  NSError *error = nil;
+  NSString *html = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&error];
 
-  [webView loadRequest:request];
+  if (!error) {
+    [webView loadHTMLString:html baseURL:[NSURL URLWithString:serverURL]];
+  }
 }
 
 - (NSDictionary *)parseQuery:(NSString *)query {
