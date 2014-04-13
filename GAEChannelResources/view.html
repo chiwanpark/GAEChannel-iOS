@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8"/>
   <title>GAEChannel View</title>
+  <script type="text/javascript" src="{{ CHANNEL_API_SCRIPT_URL }}"></script>
   <script type="text/javascript">
-    var scheme = '';
+    var scheme = '{{ SCHEME }}';
     var channel = null;
     var socket = null;
 
@@ -13,21 +14,6 @@
 
       xhrObj.open('GET', serverURL, true);
       xhrObj.send();
-    }
-
-    function loadJSAPI(serverURL) {
-      var xhr = new XMLHttpRequest();
-      var src = serverURL + '/_ah/channel/jsapi';
-
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState == 4 && (xhr.status == 304 || xhr.status == 200)) {
-          eval(xhr.responseText);
-          __callObjCFunction('channelInitialized', {});
-        }
-      };
-
-      xhr.open('GET', src);
-      xhr.send(null);
     }
 
     function openChannel(token) {
@@ -88,6 +74,10 @@
     function setScheme(newScheme) {
       scheme = newScheme;
     }
+
+    window.onload = function () {
+      __callObjCFunction('channelInitialized', {});
+    };
   </script>
 </head>
 <body>

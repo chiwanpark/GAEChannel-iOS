@@ -14,7 +14,6 @@
   NSString *scheme;
   NSString *serverURL;
   UIWebView *webView;
-  BOOL initialized;
   id <NSObject, GAEChannelDelegate> channelDelegate;
 }
 

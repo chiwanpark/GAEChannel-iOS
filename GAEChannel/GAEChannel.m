@@ -18,7 +18,6 @@
 
   if (self) {
     // initialize instance variables
-    initialized = FALSE;
     serverURL = url;
     scheme = @"ios-gaechannel://";
     channelDelegate = delegate;
@@ -41,11 +40,6 @@
 #pragma mark Google Channel API
 
 - (void)connectWithToken:(NSString *)token {
-  if (!initialized) {
-    NSLog(@"GAEChannel is uninitialized!");
-    return;
-  }
-
   NSLog(@"connect: %@ WithKey: %@", serverURL, token);
   NSString *script = [NSString stringWithFormat:@"openChannel('%@');", token];
   [webView stringByEvaluatingJavaScriptFromString:script];
@@ -75,8 +69,11 @@
   NSURL *url = [[GAEChannel frameworkBundle] URLForResource:@"view" withExtension:@"html"];
   NSError *error = nil;
   NSString *html = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&error];
+  NSString *scriptURL = [NSString stringWithFormat:@"%@/_ah/channel/jsapi", serverURL];
 
   if (!error) {
+    html = [html stringByReplacingOccurrencesOfString:@"{{ CHANNEL_API_SCRIPT_URL }}" withString:scriptURL];
+    html = [html stringByReplacingOccurrencesOfString:@"{{ SCHEME }}" withString:scheme];
     [webView loadHTMLString:html baseURL:[NSURL URLWithString:serverURL]];
   }
 }
@@ -100,11 +97,6 @@
 
 #pragma mark UIWebViewDelegate method
 
-- (void)webViewDidFinishLoad:(UIWebView *)ignored {
-  NSString *cmds = [NSString stringWithFormat:@"setScheme('%@');loadJSAPI('%@');", scheme, serverURL];
-  [webView stringByEvaluatingJavaScriptFromString:cmds];
-}
-
 - (BOOL)webView:(UIWebView *)ignored shouldStartLoadWithRequest:(NSURLRequest *)request
  navigationType:(UIWebViewNavigationType)navigationType {
   NSURL *url = [request URL];
@@ -123,7 +115,6 @@
       [channelDelegate onError:[[params objectForKey:@"code"] intValue]
                WithDescription:[params objectForKey:@"description"]];
     } else if ([selector isEqualToString:@"channelInitialized"]) {
-      initialized = TRUE;
       [channelDelegate channelInitialized:self];
     }
 
