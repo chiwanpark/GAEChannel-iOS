@@ -7,16 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "GAEChannel.h"
-#import "AFNetworking.h"
 #import "XCTestCase+AsyncTesting.h"
+#import "OpenTestBase.h"
 
-@interface GAEChannelTests : XCTestCase <GAEChannelDelegate> {
-  NSString *baseURL;
-  GAEChannel *channel;
-  AFHTTPRequestOperationManager *manager;
-  NSDictionary *params;
-  NSString *token;
+@interface GAEChannelTests : XCTestCase {
+  NSString *serverURL;
 }
 @end
 
@@ -24,10 +19,7 @@
 
 - (void)setUp {
   [super setUp];
-
-  baseURL = @"http://localhost:8080";
-  manager = [AFHTTPRequestOperationManager manager];
-  params = @{@"client_id" : [[NSUUID UUID] UUIDString]};
+  serverURL = @"http://localhost:8080";
 }
 
 - (void)tearDown {
@@ -35,41 +27,10 @@
   [super tearDown];
 }
 
-- (void)testBasic {
-  NSString *url = [NSString stringWithFormat:@"%@/open-channel", baseURL];
+- (void)testChannelOpen {
+  OpenTestBase *testBase = [[OpenTestBase alloc] initWithTestCase:self AndServerURL:serverURL];
 
-  [manager POST:url
-     parameters:params
-        success:^(AFHTTPRequestOperation *operation, id responseObject) {
-          token = [((NSDictionary *) responseObject) objectForKey:@"token"];
-          channel = [GAEChannel channelWithServerURL:baseURL Delegate:self];
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-    NSLog(@"%s: failed on token acquiring", __PRETTY_FUNCTION__);
-    [self notify:XCTAsyncTestCaseStatusFailed];
-  }];
+  [testBase start];
 }
-
-- (void)channelInitialized:(GAEChannel *)ignored {
-  NSLog(@"Google Channel API is initialized");
-  [channel connectWithToken:token];
-}
-
-- (void)onOpen {
-  NSLog(@"GAEChannel Opened");
-  [self notify:XCTAsyncTestCaseStatusSucceeded];
-}
-
-- (void)onMessage:(NSString *)message {
-  NSLog(@"Message Arrived: %@", message);
-}
-
-- (void)onError:(NSInteger)code WithDescription:(NSString *)description {
-  NSLog(@"Error occured: %ld, %@", (long) code, description);
-}
-
-- (void)onClose {
-  NSLog(@"GAEChannel Closed!");
-}
-
 
 @end
