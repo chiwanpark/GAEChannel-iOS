@@ -53,6 +53,7 @@
 		925D56111097DF7C52EBFFD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925D57F6C7ABBC15D5E14C54 /* Foundation.framework */; };
 		925D57F23948CCDBA9362ACA /* TestBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D55066A75882EFF55F1C6 /* TestBase.m */; };
 		925D58132EB2169D7CAEFFAD /* GAEChannelDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 925D51B2A4D2DBCB3684673A /* GAEChannelDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		925D599FDCEBFD83D1954EA3 /* CloseTestBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D580AB521C7402640B44B /* CloseTestBase.m */; };
 		925D5B18C026FDE302B5F2EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 925D5AFE7DC3ADA06D630422 /* InfoPlist.strings */; };
 		925D5B361CC6FFCF41901812 /* GAEChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D544846BCB077FD79ECAE /* GAEChannel.m */; };
 		925D5CCDF7B4ECBBA2D68C97 /* libGAEChannel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 925D5AA20B9A51A0C22F93D9 /* libGAEChannel.a */; };
@@ -162,6 +163,7 @@
 		925D5193AF76D7BE6A9D67CB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		925D51B2A4D2DBCB3684673A /* GAEChannelDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAEChannelDelegate.h; sourceTree = "<group>"; };
 		925D52C443AEF1F40A26AA44 /* view.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = view.html; sourceTree = "<group>"; };
+		925D52EBE47D9EFF830A8325 /* CloseTestBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloseTestBase.h; sourceTree = "<group>"; };
 		925D5326E64B594ED2110829 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		925D53DFB8D6D648CEBEF75B /* GAEChannel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAEChannel.h; sourceTree = "<group>"; };
 		925D544846BCB077FD79ECAE /* GAEChannel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GAEChannel.m; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 		925D572907C794C2C2E389B8 /* TestBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestBase.h; sourceTree = "<group>"; };
 		925D57EF13C1869FA10075FB /* GAEChannelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GAEChannelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		925D57F6C7ABBC15D5E14C54 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		925D580AB521C7402640B44B /* CloseTestBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloseTestBase.m; sourceTree = "<group>"; };
 		925D595EBDFF2F84D2BA16AB /* GAEChannelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GAEChannelTests.m; sourceTree = "<group>"; };
 		925D59BA1FA719DE94664F40 /* XCTestCase+AsyncTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+AsyncTesting.h"; sourceTree = "<group>"; };
 		925D5A12E116236E5FB9924D /* GAEChannelTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "GAEChannelTests-Info.plist"; sourceTree = "<group>"; };
@@ -340,6 +343,8 @@
 				925D55066A75882EFF55F1C6 /* TestBase.m */,
 				925D572907C794C2C2E389B8 /* TestBase.h */,
 				925D5C54155377FF1E551FA8 /* OpenTestBase.h */,
+				925D580AB521C7402640B44B /* CloseTestBase.m */,
+				925D52EBE47D9EFF830A8325 /* CloseTestBase.h */,
 			);
 			path = GAEChannelTests;
 			sourceTree = "<group>";
@@ -587,6 +592,7 @@
 				925D51A6DD5B5728B0884A1B /* XCTestCase+AsyncTesting.m in Sources */,
 				925D5031255ABF7F9C6DB7F7 /* OpenTestBase.m in Sources */,
 				925D57F23948CCDBA9362ACA /* TestBase.m in Sources */,
+				925D599FDCEBFD83D1954EA3 /* CloseTestBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

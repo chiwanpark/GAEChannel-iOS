@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "XCTestCase+AsyncTesting.h"
 #import "OpenTestBase.h"
+#import "CloseTestBase.h"
 
 @interface GAEChannelTests : XCTestCase {
   NSString *serverURL;
@@ -29,6 +30,12 @@
 
 - (void)testChannelOpen {
   OpenTestBase *testBase = [[OpenTestBase alloc] initWithTestCase:self AndServerURL:serverURL];
+
+  [testBase start];
+}
+
+- (void)testChannelClose {
+  CloseTestBase *testBase = [[CloseTestBase alloc] initWithTestCase:self AndServerURL:serverURL];
 
   [testBase start];
 }
