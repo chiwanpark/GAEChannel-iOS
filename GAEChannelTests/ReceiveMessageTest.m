@@ -66,4 +66,10 @@
   }
 }
 
+- (void)onError:(NSInteger)code description:(NSString *)description {
+  [super onError:code description:description];
+
+  [testCase notify:XCTAsyncTestCaseStatusFailed];
+}
+
 @end
