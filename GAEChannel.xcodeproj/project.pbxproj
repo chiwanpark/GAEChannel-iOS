@@ -847,7 +847,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = "";
+				CURRENT_PROJECT_VERSION = 0.1;
 				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/GAEChannel.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -898,7 +898,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = "";
+				CURRENT_PROJECT_VERSION = 0.1;
 				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/GAEChannel.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -939,6 +939,7 @@
 				409CC70118F8422A00781B75 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		925D5144F739E3B7F29491A7 /* Build configuration list for PBXProject "GAEChannel" */ = {
 			isa = XCConfigurationList;
