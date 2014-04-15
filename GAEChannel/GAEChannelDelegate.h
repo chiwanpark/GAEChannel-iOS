@@ -9,13 +9,13 @@
 
 @protocol GAEChannelDelegate <NSObject>
 
-- (void)channelInitialized:(GAEChannel *)channel;
+- (void)APIInitialized:(GAEChannel *)channel;
 
 - (void)onOpen;
 
 - (void)onMessage:(NSString *)message;
 
-- (void)onError:(NSInteger)code WithDescription:(NSString *)description;
+- (void)onError:(NSInteger)code description:(NSString *)description;
 
 - (void)onClose;
 

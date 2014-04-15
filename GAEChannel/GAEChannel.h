@@ -17,9 +17,9 @@
   id <NSObject, GAEChannelDelegate> channelDelegate;
 }
 
-- (instancetype)initWithServerURL:(NSString *)url Delegate:(id <NSObject, GAEChannelDelegate>)delegate;
+- (instancetype)initWithServerURL:(NSString *)url delegate:(id <NSObject, GAEChannelDelegate>)delegate;
 
-+ (instancetype)channelWithServerURL:(NSString *)url Delegate:(id <NSObject, GAEChannelDelegate>)delegate;
++ (instancetype)channelWithServerURL:(NSString *)url delegate:(id <NSObject, GAEChannelDelegate>)delegate;
 
 - (void)connectWithToken:(NSString *)token;
 

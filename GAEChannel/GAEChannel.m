@@ -13,7 +13,7 @@
 
 #pragma mark Initializer method
 
-- (instancetype)initWithServerURL:(NSString *)url Delegate:(id <NSObject, GAEChannelDelegate>)delegate {
+- (instancetype)initWithServerURL:(NSString *)url delegate:(id <NSObject, GAEChannelDelegate>)delegate {
   self = [super init];
 
   if (self) {
@@ -33,8 +33,8 @@
   return self;
 }
 
-+ (instancetype)channelWithServerURL:(NSString *)url Delegate:(id <NSObject, GAEChannelDelegate>)delegate {
-  return [[self alloc] initWithServerURL:url Delegate:delegate];
++ (instancetype)channelWithServerURL:(NSString *)url delegate:(id <NSObject, GAEChannelDelegate>)delegate {
+  return [[self alloc] initWithServerURL:url delegate:delegate];
 }
 
 #pragma mark Google Channel API
@@ -113,9 +113,9 @@
       [channelDelegate onMessage:[params objectForKey:@"message"]];
     } else if ([selector isEqualToString:@"onError"]) {
       [channelDelegate onError:[[params objectForKey:@"code"] intValue]
-               WithDescription:[params objectForKey:@"description"]];
+                   description:[params objectForKey:@"description"]];
     } else if ([selector isEqualToString:@"channelInitialized"]) {
-      [channelDelegate channelInitialized:self];
+      [channelDelegate APIInitialized:self];
     }
 
     return NO;

@@ -176,6 +176,7 @@
 		925D57EF13C1869FA10075FB /* GAEChannelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GAEChannelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		925D57F6C7ABBC15D5E14C54 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		925D580AB521C7402640B44B /* CloseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloseTest.m; sourceTree = "<group>"; };
+		925D583E353E08BC320EEA42 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = README.md; sourceTree = "<group>"; };
 		925D595EBDFF2F84D2BA16AB /* GAEChannelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GAEChannelTests.m; sourceTree = "<group>"; };
 		925D59BA1FA719DE94664F40 /* XCTestCase+AsyncTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+AsyncTesting.h"; sourceTree = "<group>"; };
 		925D5A12E116236E5FB9924D /* GAEChannelTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "GAEChannelTests-Info.plist"; sourceTree = "<group>"; };
@@ -376,6 +377,7 @@
 				925D5B0817105FACDF879F1A /* GAEChannel */,
 				925D5C2BAA8282D2D20F13E7 /* GAEChannelTests */,
 				925D5326E64B594ED2110829 /* .gitignore */,
+				925D583E353E08BC320EEA42 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};

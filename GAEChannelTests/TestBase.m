@@ -26,7 +26,7 @@
 
 }
 
-- (void)channelInitialized:(GAEChannel *)ignored {
+- (void)APIInitialized:(GAEChannel *)ignored {
   NSLog(@"Google Channel API initialized");
 }
 
@@ -38,7 +38,7 @@
   NSLog(@"Message arrived: %@", message);
 }
 
-- (void)onError:(NSInteger)code WithDescription:(NSString *)description {
+- (void)onError:(NSInteger)code description:(NSString *)description {
   NSLog(@"Error occurred: %ld, %@", code, description);
 }
 
